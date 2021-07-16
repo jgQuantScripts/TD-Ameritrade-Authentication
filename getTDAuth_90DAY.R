@@ -35,7 +35,7 @@ getQuoteTD = function(ticker)
   tmp = rbindlist(data_raw)
   if(tmp$delayed[1] == TRUE)
   {
-    token = readRDS("token90.rds")
+    token = readRDS("~/Desktop/R/token90.rds")
     token = access_token(refresh_token=token2$refresh_token, client_id=api_key)
     
     btoken = paste0("Bearer ",token$access_token)
